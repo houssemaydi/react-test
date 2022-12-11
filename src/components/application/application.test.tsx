@@ -38,6 +38,9 @@ describe("Application", () => {
 		const closeElement = screen.getByTitle("close");
 		expect(closeElement).toBeInTheDocument();
 
+		const custumElement = screen.getByTestId("custom-element");
+		expect(custumElement).toBeInTheDocument();
+
 		const termsElement2 = screen.getByLabelText(
 			"I agree to the terms and conditions"
 		);

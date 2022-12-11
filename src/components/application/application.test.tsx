@@ -17,11 +17,23 @@ describe("Application", () => {
 		});
 		expect(sectionElement).toBeInTheDocument();
 
+		const paraghraphElement = screen.getByText("All fields are mandatory");
+		expect(paraghraphElement).toBeInTheDocument();
+
 		const nameElement = screen.getByRole("textbox", { name: "Name" });
 		expect(nameElement).toBeInTheDocument();
 
 		const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
 		expect(nameElement2).toBeInTheDocument();
+
+		const nameElement3 = screen.getByPlaceholderText("Fullname");
+		expect(nameElement3).toBeInTheDocument();
+
+		const nameElement4 = screen.getByDisplayValue("Houssem");
+		expect(nameElement4).toBeInTheDocument();
+
+		const imageElement = screen.getByAltText("a person with a laptop");
+		expect(imageElement).toBeInTheDocument();
 
 		const termsElement2 = screen.getByLabelText(
 			"I agree to the terms and conditions"

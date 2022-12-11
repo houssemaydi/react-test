@@ -35,6 +35,9 @@ describe("Application", () => {
 		const imageElement = screen.getByAltText("a person with a laptop");
 		expect(imageElement).toBeInTheDocument();
 
+		const closeElement = screen.getByTitle("close");
+		expect(closeElement).toBeInTheDocument();
+
 		const termsElement2 = screen.getByLabelText(
 			"I agree to the terms and conditions"
 		);

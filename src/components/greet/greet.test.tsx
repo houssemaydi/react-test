@@ -7,11 +7,4 @@ describe("Greet", () => {
 		const textElement = screen.getByText(/hello/i);
 		expect(textElement).toBeInTheDocument();
 	});
-	describe("Test", () => {
-		test(" renders with name props", () => {
-			render(<Greet name='Houssem' />);
-			const textElement = screen.getByText("Hello Houssem");
-			expect(textElement).toBeInTheDocument();
-		});
-	});
 });
